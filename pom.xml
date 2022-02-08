@@ -58,6 +58,33 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>1.17.0</version>
+                <configuration>
+<!--                    <mvnExecutable>path_to_maven_executable</mvnExecutable>-->
+<!--                    <gitExecutable>path_to_git_executable</gitExecutable>-->
+
+                    <installProject>false</installProject>
+                    <verbose>false</verbose>
+
+                    <gitFlowConfig>
+                        <productionBranch>master</productionBranch>
+                        <developmentBranch>spring-example</developmentBranch>
+                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                        <supportBranchPrefix>support/</supportBranchPrefix>
+                        <versionTagPrefix></versionTagPrefix>
+                        <origin>origin</origin>
+                    </gitFlowConfig>
+
+                    <commitMessages>
+                        <!-- since 1.2.1, see Customizing commit messages -->
+                    </commitMessages>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
